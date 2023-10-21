@@ -1,0 +1,60 @@
+
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<section class="intro">
+  <div class="bg-image h-100" style="background-image:url(https://tse1.mm.bing.net/th?id=OIP.yYHKLShtRMZ1dF-Jb6rSUgAAAA&pid=Api&P=0&h=220) ;">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card mask-custom">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-borderless text-white mb-0">
+                    <thead>
+                     <tr>
+                        <th>Toy Name</th>
+                        <th>Toy Size</th>
+                        <th>Toy color</th>
+                        <th>Toy price</th>
+                        <th>Toy image</th>
+                        <th>Function</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+                        {{#each CuaHang}}
+                            <tr>
+                                <td>{{ name }}</td>
+                                <td>{{ size }}</td>
+                                <td>{{ color }}</td>
+                                <td>{{ price }} $</td>
+                                <td>
+                                    <a href="/store/detail/{{ _id }}">
+                                        <img src="{{ image }}" width="170" height="200">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a class="btn-blue a" href="/store/edit/{{_id }}"><i class="fas fa-edit"></i></a>
+                                    <a class="btn-blue b" href="/store/add/{{_id }}"><i class="fas fa-plus"></i></a>
+                                    <a class="btn-blue c" href="/store/delete/{{ _id }}" 
+                                    onclick="return confirm('Are you sure to delete this product ?');"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
