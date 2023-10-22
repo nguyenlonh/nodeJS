@@ -6,5 +6,9 @@ router.get('/', function(req, res, next) {
   res.redirect('/store');
 });
 
+router.get('/home', function(req, res, next) {
+  res.redirect('/view/homepage');
+});
+
 
 module.exports = router;

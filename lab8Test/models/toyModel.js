@@ -8,7 +8,6 @@ var StoreSchema = mongoose.Schema(
         size :{
             type : Number,
             min : [0, 'size can not be negative'],
-            max : 200
         },
         color:{
             type : String

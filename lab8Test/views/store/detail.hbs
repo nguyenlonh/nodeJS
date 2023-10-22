@@ -1,27 +1,9 @@
-{{!-- <div class="container col-md-10">
-   <div class="row">
-        <div class="col-md-5">
-            
-            <img src="{{ CuaHang.image }}" width="300" height="300" alt="This is image">
-
-            
-        </div>
-        <div class="col-md-7 card bg-warning">
-            <h1 class="text-center bg-success"> Information of the product </h1>
-            <h3> Id: {{ CuaHang._id }} </h3>
-            <h3> Tên: {{ CuaHang.name }} </h3>
-            <h3> Size: {{ CuaHang.size }} </h3>
-            <h3> Color: {{ CuaHang.color }} </h3>
-            <h3> Description: {{ CuaHang.des }} </h3>
-        </div>
-   </div>
-</div>  --}}
-
 <head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/detailS.css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
@@ -42,19 +24,25 @@
                         <h3> {{ CuaHang.name }} </h3>
                     </div>
 
+                    <div class="description-area my-4">
+                       <h4>Size:  {{ CuaHang.size }} </h4>
+                    </div>
+
+                    <div class="description-area my-4">
+                       <h4>Color: {{ CuaHang.color }} </h4>
+                    </div>
 
                     <div class="price-area my-4">
-                       <h4> {{ CuaHang.price }} $</h4>
+                       <h4>Price: {{ CuaHang.price }} $</h4>
                         <p class="text-secondary mb-1">(Additional tax may apply on checkout)</p>
                     </div>
 
-
                     <div class="buttons d-flex my-5">
                         <div class="block">
-                            <a href="#" class="shadow btn custom-btn ">Add Wishlist</a>
+                            <a href="#" class="shadow btn custom-btn a">Buy now</a>
                         </div>
                         <div class="block">
-                            <button class="shadow btn custom-btn">Add to cart</button>
+                            <button class="shadow btn custom-btn b">Add to cart</button>
                         </div>
 
                         <div class="block quantity">
@@ -85,16 +73,10 @@
                     <p class="font-weight-bold mb-0"><span><i class="fa-solid fa-filter"></i></span> <b>Delivery options</b> </p>
                     <p class="text-secondary">View delivery options here</p>
                 </div>
-                
-             
             </div>
         </div>
     </div>
-
-
-
-
-    </div>
+</div>
 
 
 

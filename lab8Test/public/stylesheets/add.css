@@ -1,0 +1,36 @@
+body {
+    background-image: url('your-image-url.jpg');
+    background-size: cover; /* Cân chỉnh hình nền sao cho nó kín hết kích thước màn hình */
+    background-repeat: no-repeat; /* Ngăn lặp lại hình nền */
+ }
+
+ .container {
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền của phần container, có độ trong suốt */
+    border: 2px solid #f39c12; /* Màu viền của container */
+    padding: 20px; /* Khoảng cách lề bên trong container */
+ }
+ 
+ .card {
+    background-color: #ffdb58; /* Màu nền của card */
+    border: 2px solid #e74c3c; /* Màu viền của card */
+    padding: 20px;
+ }
+ 
+ .form-group {
+    background-color: #f9ebc2; /* Màu nền của các form-group */
+    margin: 10px; /* Khoảng cách giữa các form-group */
+ }
+ 
+ h1 {
+    color: #e74c3c; /* Màu chữ tiêu đề */
+ }
+
+ .text-funny {
+   color: #FF33CC; /* Màu hồng */
+   text-transform: uppercase; /* Chuyển đổi văn bản thành chữ in hoa */
+   text-align: center; /* Căn giữa văn bản */
+   margin-top: 3rem; /* Khoảng cách từ trên xuống */
+   font-size: 36px; /* Kích thước chữ tùy chỉnh */
+   font-family: 'Comic Sans MS', cursive; /* Lựa chọn font chữ hài hước */
+}
+ 

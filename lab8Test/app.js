@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 
 //KHAI BAO ROUTER
 var storeRouter = require('./routes/store');
+var homepageRouter = require('./routes/homepage');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/store', storeRouter);
+app.use('/homepage', homepageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

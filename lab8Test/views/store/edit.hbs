@@ -1,4 +1,4 @@
-<form action="/store/edit/{{ CuaHang._id }}" method="post" class="container col-md-8 card bg-warning mt-3">
+{{!-- <form action="/store/edit/{{ CuaHang._id }}" method="post" class="container col-md-8 card bg-warning mt-3">
 <h1 class="text-danger text-uppercase text-center mt-3">Edit Product</h1>
 <div class="form-group mt-3">
     <label for="name" class="text-primary">Name</label>
@@ -36,4 +36,42 @@
       <input class="btn btn-primary" type="submit" value="Edit">
       <input class="btn btn-success" type="reset" value="Clear">
 </div>
+</form> --}}
+
+<form action="/store/edit/{{ CuaHang._id }}" method="post" class="container col-md-8 card bg-light mt-3">
+    <h1 class="text-danger text-uppercase text-center mt-3">Edit Product</h1>
+    <div class="form-group mt-3">
+        <label for="name" class="text-primary">Name</label>
+        <input class="form-control" type="text" name="name" required minlength="3" maxlength="30" value="{{ CuaHang.name }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="size" class="text-primary">Size</label>
+        <input class="form-control" type="number" name="size"  value="{{ CuaHang.size }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="color" class="text-primary">Color</label>
+        <input class="form-control" type="text" name="color" value="{{ CuaHang.color }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="price" class="text-primary">Price</label>
+        <input class="form-control" type="text" name="price" value="{{ CuaHang.price }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="description" class="text-primary">Description</label>
+        <input class="form-control" type="text" name="description" value="{{ CuaHang.des }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="image" class="text-primary">Image</label>
+        <input class="form-control" type="text" name="image" value="{{ CuaHang.image }}">
+    </div>
+
+    <div class="form-group mt-3 mb-3 text-center">
+        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="reset" class="btn btn-success">Clear</button>
+    </div>
 </form>
