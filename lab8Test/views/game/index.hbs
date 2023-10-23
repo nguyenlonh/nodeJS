@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/homepage/home">HomePage</a>
+        <form class="form-inline ml-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="dropdown ml-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Sort
+            </button>
+        </div>
+        <div>
+          <a class="btn btn-success ml-2" href="/game/add">Add</a>
+         </div>
+         <div>
+        <a name="logout" id="" class="btn btn-primary" href="#" role="button">Logout</a>
+        </div>
+    </nav>
+
+    <section class="intro">
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Menu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each gamemode}}
+                          <tr>
+                              <th scope="row">{{@index}}</th>
+                              <td>{{ name }}</td>
+                              <td>{{ type }}</td>
+                              <td>{{ price }}</td>
+                              <td>{{ des }} $</td>
+                              <td>
+                                  <a href="/game/detail/{{ _id }}">
+                                      <img src="{{ image }}" width="160" height="190">
+                                  </a>
+                              </td>
+                              <td>
+                                  <a class="btn btn-primary" href="/game/edit/{{_id}}"><i class="fas fa-edit"></i> Edit</a>
+                                  <a class="btn btn-danger" href="/game/delete/{{ _id }}"
+                                      onclick="return confirm('Are you sure to delete this game product ?');"><i
+                                      class="fas fa-trash-alt"></i> Delete</a>
+                              </td>
+                          </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

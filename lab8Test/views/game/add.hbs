@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../stylessheets/add.css">
+</head>
+<body>
+
+   <form action="/game/add/{{_id}}" method="post" class="container col-md-8 card bg-white mt-3">
+      <h1 class="text-funny text-uppercase text-center mt-3">Add Product</h1>
+      <div class="form-group mt-3">
+         <label for="name" class="text-dark text-uppercase text-center mt-3">Name</label>
+      <input class="form-control" type="text" name="name" required minlength="3" maxlength="50">
+      </div>
+
+      <div class="form-group mt-3">
+        <label for="type" class="text-primary">Type</label>
+        <br>
+        <input type="radio" name="type" value="Action"> Action
+        <input type="radio" name="type" value="Funny"> Funny
+    </div>
+
+      <div class="form-group mt-3">
+      <label for="size" class="text-dark text-uppercase text-center mt-3">Price</label>
+      <input class="form-control" type="number" name="price" >
+      </div>
+
+      <div class="form-group mt-3">
+      <label for="size" class="text-dark text-uppercase text-center mt-3">Description</label>
+      <input class="form-control" type="text" name="des" >
+      </div>
+
+      <div class="form-group mt-3">
+         <label for="image" class="text-dark text-uppercase text-center mt-3">Image</label>
+         <input class="form-control" type="url" name="image" required>
+      </div>
+
+   <div class="form-group mt-3 mb-3 text-center">
+         <input class="btn btn-info" type="submit" value="Add">
+         <input class="btn btn-danger" type="reset" value="Clear">
+      </div>
+   </form>
+  
+</body>
+</html>

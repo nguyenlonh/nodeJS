@@ -1,0 +1,32 @@
+<form action="/game/edit/{{ gamemode._id }}" method="post" class="container col-md-8 card bg-light mt-3">
+    <h1 class="text-danger text-uppercase text-center mt-3">Edit Game Product</h1>
+    <div class="form-group mt-3">
+        <label for="name" class="text-primary">Name</label>
+        <input class="form-control" type="text" name="name" required minlength="3" maxlength="30" value="{{ gamemode.name }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="size" class="text-primary">Type</label>
+        <input class="form-control" type="type" name="type"  value="{{ gamemode.type }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="price" class="text-primary">Price</label>
+        <input class="form-control" type="text" name="price" value="{{ gamemode.price }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="description" class="text-primary">Description</label>
+        <input class="form-control" type="text" name="description" value="{{ gamemode.des }}">
+    </div>
+
+    <div class="form-group mt-3">
+        <label for="image" class="text-primary">Image</label>
+        <input class="form-control" type="text" name="image" value="{{ gamemode.image }}">
+    </div>
+
+    <div class="form-group mt-3 mb-3 text-center">
+        <button type="submit" class="btn btn-primary">Edit</button>
+        <button type="reset" class="btn btn-success">Clear</button>
+    </div>
+</form>
