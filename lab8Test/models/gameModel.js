@@ -7,7 +7,6 @@ var StoreSchema = mongoose.Schema(
         },
         type :{
             type : String,
-            enum : ['action', 'funny']
         },
         price:{
             type : Number,

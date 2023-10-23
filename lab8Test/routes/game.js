@@ -6,7 +6,7 @@ const gameModel = require('../models/gameModel');
 // URL : localhost:3001/store ('../view/store/index')
 router.get('/', async (req, res)=>{
     var store = await gameModel.find();
-    res.render('game/index', { gamemode : store });
+    res.render('store/index', { gamemode : store });
 });
 
 //see detail 

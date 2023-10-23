@@ -1,60 +1,81 @@
-{{!-- <head>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+{{!-- <!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
-<section class="intro">
-  <div class="bg-image h-100" style="background-image:url() ;">
-    <div class="mask d-flex align-items-center h-100">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="card mask-custom">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-borderless text-white mb-0">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="../store/homepage.hbs">HomePage</a>
+        <form class="form-inline ml-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="dropdown ml-2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="sortDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Sort
+            </button>
+        </div>
+        <div>
+          <a class="btn btn-success ml-2" href="/store/add">Add Toy</a>
+          <a class="btn btn-success ml-2" href="/game/add">Add Game</a>
+         </div>
+         <div>
+        <a name="logout" id="" class="btn btn-primary" href="#" role="button">Logout</a>
+        </div>
+    </nav>
+
+    <section class="intro" >
+        <div class="container">
+            <div class="table-responsive">
+                <table class="table">
                     <thead>
-                     <tr>
-                        <th>Toy Name</th>
-                        <th>Toy Size</th>
-                        <th>Toy color</th>
-                        <th>Toy price</th>
-                        <th>Toy image</th>
-                        <th>Function</th>
-                    </tr>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Toy Name</th>
+                            <th scope="col">Toy Size</th>
+                            <th scope="col">Toy Color</th>
+                            <th scope="col">Toy Price</th>
+                            <th scope="col">Toy Image</th>
+                            <th scope="col">Function</th>
+                        </tr>
                     </thead>
-                    
                     <tbody>
                         {{#each CuaHang}}
-                            <tr>
-                                <td>{{ name }}</td>
-                                <td>{{ size }}</td>
-                                <td>{{ color }}</td>
-                                <td>{{ price }} $</td>
-                                <td>
-                                    <a href="/store/detail/{{ _id }}">
-                                        <img src="{{ image }}" width="170" height="200">
-                                    </a>
-                                </td>
-                                <td>
-                                    <a class="btn-blue a" href="/store/edit/{{_id }}"><i class="fas fa-edit"></i></a>
-                                    <a class="btn-blue b" href="/store/add/{{_id }}"><i class="fas fa-plus"></i></a>
-                                    <a class="btn-blue c" href="/store/delete/{{ _id }}" 
-                                    onclick="return confirm('Are you sure to delete this product ?');"><i class="fas fa-trash-alt"></i></a>
-                                </td>
-                            </tr>
+                          <tr>
+                              <th scope="row">{{@index}}</th>
+                              <td>{{ name }}</td>
+                              <td>{{ size }}</td>
+                              <td>{{ color }}</td>
+                              <td>{{ price }} $</td>
+                              <td>
+                                  <a href="/store/detail/{{ _id }}">
+                                      <img src="{{ image }}" width="170" height="200">
+                                  </a>
+                              </td>
+                              <td>
+                                  <a class="btn btn-primary" href="/store/edit/{{_id}}"><i class="fas fa-edit"></i> Edit</a>
+                                  <a class="btn btn-danger" href="/store/delete/{{ _id }}"
+                                      onclick="return confirm('Are you sure to delete this product ?');"><i
+                                      class="fas fa-trash-alt"></i> Delete</a>
+                              </td>
+                          </tr>
                         {{/each}}
                     </tbody>
-                  </table>
-                </div>
-              </div>
+                </table>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section> --}}
+    </section>
+
+</body>
+</html> --}}
+
 
 <!DOCTYPE html>
 <html>
@@ -81,20 +102,21 @@
             </button>
         </div>
         <div>
-          <a class="btn btn-success ml-2" href="/store/add">Add</a>
+          <a class="btn btn-success ml-2" href="/store/add">Add Toy</a>
+          <a class="btn btn-success ml-2" href="/game/add">Add Game</a>
          </div>
          <div>
         <a name="logout" id="" class="btn btn-primary" href="#" role="button">Logout</a>
         </div>
     </nav>
 
-    <section class="intro">
+    <section class="intro" >
         <div class="container">
             <div class="table-responsive">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">No.</th>
                             <th scope="col">Toy Name</th>
                             <th scope="col">Toy Size</th>
                             <th scope="col">Toy Color</th>
@@ -117,7 +139,6 @@
                                   </a>
                               </td>
                               <td>
-                                  {{!-- <a class="btn btn-success ml-2" href="/store/add/{{_id}}">Add</a> --}}
                                   <a class="btn btn-primary" href="/store/edit/{{_id}}"><i class="fas fa-edit"></i> Edit</a>
                                   <a class="btn btn-danger" href="/store/delete/{{ _id }}"
                                       onclick="return confirm('Are you sure to delete this product ?');"><i
@@ -127,9 +148,44 @@
                         {{/each}}
                     </tbody>
                 </table>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">No.</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Menu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each gamemode}}
+                          <tr>
+                              <th scope="row">{{@index}}</th>
+                              <td>{{ name }}</td>
+                              <td>{{ type }}</td>
+                              <td>{{ price }}.00 $</td>
+                              <td>{{ des }} </td>
+                              <td>
+                                  <a href="/game/detail/{{ _id }}">
+                                      <img src="{{ image }}" width="160" height="190">
+                                  </a>
+                              </td>
+                              <td>
+                                  <a class="btn btn-primary" href="/game/edit/{{_id}}"><i class="fas fa-edit"></i> Edit</a>
+                                  <a class="btn btn-danger" href="/game/delete/{{ _id }}"
+                                      onclick="return confirm('Are you sure to delete this game product ?');"><i
+                                      class="fas fa-trash-alt"></i> Delete</a>
+                              </td>
+                          </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
-</body>
 
+</body>
 </html>
