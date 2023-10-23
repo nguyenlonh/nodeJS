@@ -16,7 +16,7 @@ router.get('/detail/:id', async (req, res)=>{
     res.render('store/detail', { CuaHang : store });
 });
 
-router.get('/add/:id', (req, res)=>{
+router.get('/add', (req, res)=>{
     res.render('store/add');
 });
 router.post('/add', async (req, res)=>{

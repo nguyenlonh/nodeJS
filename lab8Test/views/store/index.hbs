@@ -79,15 +79,9 @@
                 aria-haspopup="true" aria-expanded="false">
                 Sort
             </button>
-            <div class="dropdown-menu" aria-labelledby="sortDropdown">
-                <a class="dropdown-item" href="#">Price (Low to High)</a>
-                <a class="dropdown-item" href="#">Price (High to Low)</a>
-                <a class="dropdown-item" href="#">Name (A-Z)</a>
-                <a class="dropdown-item" href="#">Name (Z-A)</a>
-            </div>
         </div>
         <div>
-            <a class="btn btn-success ml-2" href="/store/add/{{_id}}">Add</a>
+          <a class="btn btn-success ml-2" href="/store/add">Add</a>
          </div>
          <div>
         <a name="logout" id="" class="btn btn-primary" href="#" role="button">Logout</a>
@@ -123,7 +117,7 @@
                                   </a>
                               </td>
                               <td>
-                                  <a class="btn btn-success ml-2" href="/store/add/{{_id}}">Add</a>
+                                  {{!-- <a class="btn btn-success ml-2" href="/store/add/{{_id}}">Add</a> --}}
                                   <a class="btn btn-primary" href="/store/edit/{{_id}}"><i class="fas fa-edit"></i> Edit</a>
                                   <a class="btn btn-danger" href="/store/delete/{{ _id }}"
                                       onclick="return confirm('Are you sure to delete this product ?');"><i
