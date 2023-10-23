@@ -25,7 +25,7 @@ router.post('/add', async (req, res)=>{
     var store = req.body;
     await toyModel.create(store);
     console.log('Add Toy succeed !');
-   res.redirect('/store');
+   res.redirect('/store/manager');
 });
 
 
@@ -33,7 +33,7 @@ router.get('/delete/:id', async (req, res)=>{
     var id = req.params.id;
     await toyModel.findByIdAndDelete(id);
     console.log('Delete successful');
-    res.redirect('/store');
+    res.redirect('/store/manager');
 });
 
 router.get('/edit/:id', async (req, res)=>{
@@ -46,7 +46,7 @@ router.post('/edit/:id', async (req, res)=>{
     var store = req.body;
     await toyModel.findByIdAndUpdate(id, store);
     console.log('Update Toy succeed !');
-    res.redirect('/store');
+    res.redirect('/store/manager');
 });
 
 
