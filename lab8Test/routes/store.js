@@ -2,11 +2,13 @@ var express = require('express');
 var router = express.Router();
 
 const toyModel = require('../models/toyModel');
+const gameModel = require('../models/gameModel');
 
 // URL : localhost:3001/store ('../view/store/index')
-router.get('/', async (req, res)=>{
+router.get('/manager', async (req, res)=>{
     var store = await toyModel.find();
-    res.render('store/index', { CuaHang : store });
+    var game = await gameModel.find();
+    res.render('store/index', { CuaHang : store, gamemode : game});
 });
 
 //see detail 
