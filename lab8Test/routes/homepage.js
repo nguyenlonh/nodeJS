@@ -6,7 +6,7 @@ const gameModel = require('../models/gameModel');
 const UserModel = require('../models/UserModel');
 
 // URL : localhost:3001/home ('../view/store/index')
-router.get('/homepage', async (req, res)=>{
+router.get('/home', async (req, res)=>{
     var store = await toyModel.find();
     var game = await gameModel.find();
     res.render('store/homepage', { CuaHang : store,  gamemode : game });

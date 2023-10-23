@@ -52,8 +52,9 @@ router.post('/edit/:id', async (req, res)=>{
 
 router.post('/search', async (req, res) => {
     var keyword = req.body.name;
-    var store = await ToyModel.find({ name: new RegExp(keyword, "i") });
-    res.render('store/index', { CuaHang: store });
+    var store = await toyModel.find({ name: new RegExp(keyword, "i") });
+    var game = await gameModel.find({ name: new RegExp(keyword, "i") });
+    res.render('store/homepage', { CuaHang: store , gamemode: game });
  })
 
 
