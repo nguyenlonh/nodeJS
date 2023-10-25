@@ -1,0 +1,112 @@
+html,
+body,
+.intro {
+  height: 100%;
+}
+
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mask-custom {
+  background: rgba(24, 21, 16, 0.2);
+  border-radius: 2em;
+  backdrop-filter: blur(25px);
+  border: 4px solid rgba(255, 255, 255, 0.05);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+.table.table-borderless.text-white.mb-0{
+    border-collapse: collapse;
+    border-radius: 10px; 
+    overflow: hidden; 
+    border: 1px solid #ccc;
+}
+
+/*---------------------------------------------------*/
+
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+    border: 3px solid #ede4ec;
+    text-align: center;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+/* CSS cho nút */
+.btn-blue {
+    background-color: #5d94e5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding-top: 5px; 
+    
+}
+
+.btn-blue:hover {
+    background-color: #0040ff;
+}
+/*-----------------------------------------------------------*/
+
+/* Áp dụng các style cho bảng */
+.table.table-borderless {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Đổi màu header của bảng */
+.table.table-borderless thead th {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+/* Đổi màu các dòng trong bảng */
+.table.table-borderless tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table.table-borderless tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Đổi màu nút chức năng và biểu tượng */
+.btn-blue {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-blue:hover {
+  background-color: #0056b3;
+}
+
+/* Đảm bảo nút chức năng có khoảng cách nhau */
+.btn-blue.a {
+  margin-right: 5px;
+}
+
+.btn-blue.b {
+  margin-right: 5px;
+}
+
+
