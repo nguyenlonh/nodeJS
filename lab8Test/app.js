@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 var hbs = require('hbs');
 hbs.registerHelper('dateFormat', require('handlebars-dateformat')); 
 
+
 //khai báo & cấu hình mongoose
 var mongoose = require('mongoose');
 //Note: cần khai báo tên db ở cuối uri của connection string
